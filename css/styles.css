@@ -588,7 +588,7 @@ gap: 16px;
     width: 100%;
     height: 100%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-border-radius: 50%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,6 +642,7 @@ border-radius: 50%;
     min-height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
+    padding: 72px 24px;
 }
 
 .modal-close-button {
@@ -662,3 +663,126 @@ border-radius: 50%;
     background-color: #404BBF;
 }
 
+.contacts-form-name {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--NAVY-BLUE, #2E2F42);
+    margin-bottom: 16px;
+}
+
+.contacts-form-wrapper {
+    margin-bottom: 8px;
+}
+
+.contacts-form-input-wrapper {
+    position: relative;
+}
+
+.contacts-form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8E8F99);
+    margin-bottom: 4px;
+}
+
+.contacts-form-field {
+    width: 360px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-field:focus {
+    border-color: var(--IRIS, #4D5AE5);
+    outline: transparent;
+    outline-offset: 4px;
+}
+
+.contacts-form-field-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-field:focus + .contacts-form-field-icon {
+    fill: #4D5AE5;
+}
+
+.contacts-form-comment {
+    width: 360px;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    resize: none;
+    padding: 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-comment::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.contacts-form-comment:focus {
+    border-color: #4D5AE5;
+    outline-color: transparent;
+    outline-offset: 4px;
+}
+
+.contacts-form-checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--LIGHT-SLATE, #8E8F99);
+}
+
+.privacy-policy-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: var(--IRIS, #4D5AE5);
+}
+
+.contacts-form-own-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    stroke-width: 1px;
+    stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    cursor: pointer;
+    margin-right: 8px;
+    
+}
+
+.contacts-form-checkbox:checked
+ + .contacts-form-checkbox-label
+.contacts-form-own-checkbox {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+}
+
+.contacts-form-checkbox:focus
++ .contacts-form-checkbox-label 
+.contacts-form-own-checkbox {
+    outline: 2px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}

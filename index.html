@@ -518,32 +518,75 @@ Leave your contacts and we will call you back
 </p>
 <form class="contacts-form">
 <div class="contacts-form-wrapper">
-<label class="contacts-form-label" for="">Name</label>
+<label class="contacts-form-label" for="user-name">Name</label>
+<div class="contacts-form-input-wrapper">
 <input type="text" 
 class="contacts-form-field"
 name="user_name" 
+id="user-name"
 required 
-pattern="[a-zA-Z-а-яА-ЯіІїЇєЄґҐйЙ']+"/>
+pattern="[a-zA-Z-а-яА-ЯіІїЇєЄґҐйЙ']+"
+title="Alex"/>
+<svg class="contacts-form-field-icon" width="18" height="18">
+<use href="./images/icons.svg#icon-person"></use>
+</svg>
+</div>
 </div>
 
 <div class="contacts-form-wrapper">
-<label class="contacts-form-label" for="">Phone</label>
-<input type="tel" class="contacts-form-field" name="user_tel"/>
+<label class="contacts-form-label" for="user-phone">Phone</label>
+<div class="contacts-form-input-wrapper">
+<input type="tel"
+ class="contacts-form-field" 
+ name="user_phone"
+ id="user-phone"
+ required
+ pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+ title="xxx-xxx-xx-xx"/>
+ <svg class="contacts-form-field-icon" width="18" height="24">
+<use href="./images/icons.svg#icon-phone"></use>
+</svg>
+</div>
 </div>
 
 <div class="contacts-form-wrapper">
-<label class="contacts-form-label" for="">Email</label>
-<input type="email" class="contacts-form-field" name="user_email"/>
+<label class="contacts-form-label" for="user-email">Email</label>
+<div class="contacts-form-input-wrapper">
+<input type="email"
+ class="contacts-form-field"
+  name="user_email"
+  id="user-email"
+  required/>
+  <svg class="contacts-form-field-icon" width="18" height="24">
+<use href="./images/icons.svg#icon-email"></use>
+</svg>
+</div>
 </div>
 
 <div class="contacts-form-wrapper">
-<label class="contacts-form-label" for="">Comment</label>
-<textarea class="contacts-form-comment" id=""  placeholder="Text input"></textarea>
+<label class="contacts-form-label" for="user-comment">Comment</label>
+<textarea class="contacts-form-comment"
+ id="user-comment" 
+placeholder="Text input"
+></textarea>
 </div>
 <div class="contacts-form-checkbox-wrapper">
-  <input type="checkbox" class="contacts-form-checkbox">
-<label class="contacts-form-checkbox-label" for="" >I accept the terms and conditions of the 
-  <span class="contacts-form-policy-text">Privacy Policy</span></label>
+  <input class="contacts-form-checkbox"
+   type="checkbox"
+   name="user_policy"
+   value="true"
+   id="user-policy"
+   required
+    />
+<label class="contacts-form-checkbox-label" for="user-policy" >
+  <span class="contacts-form-own-checkbox">
+    <svg class="contacts-form-own-checkbox-icon" width="10" height="8">
+      <use href="./images/icons.svg#icon-checkmark"></use>
+    </svg>
+  </span>
+  I accept the terms and conditions of the 
+<a class="privacy-policy-link" href="" >Privacy Policy</a>
+</label>
 </div>
 <button class="contacts-form-btn">Send</button>
 </form>
