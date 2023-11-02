@@ -817,6 +817,7 @@ border-radius: 50%;
     height: 120px;
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    color: rgba(46, 47, 66, 0.4);
     resize: none;
     padding: 8px 16px;
     font-size: 12px;
@@ -837,10 +838,14 @@ border-radius: 50%;
     outline-offset: 4px;
 }
 
+.contacts-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
 .contacts-form-checkbox-label {
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--LIGHT-SLATE, #8E8F99);
 }
@@ -860,13 +865,14 @@ border-radius: 50%;
     align-items: center;
     width: 16px;
     height: 16px;
-    border-radius: 4px;
+    border-radius: 2px;
     stroke-width: 1px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     cursor: pointer;
     fill: transparent;
     margin-right: 8px; 
     margin-bottom: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-form-checkbox:checked
@@ -874,6 +880,7 @@ border-radius: 50%;
 .contacts-form-own-checkbox {
     background-color: #404BBF;
     fill: #F4F4FD;
+    border: none;
 }
 
 .contacts-form-checkbox:focus
