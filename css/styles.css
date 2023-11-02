@@ -695,6 +695,7 @@ border-radius: 50%;
     background-color: rgba(46, 47, 66, 0.40);
 
     opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     visibility: hidden;
     pointer-events: none;
 }
@@ -714,19 +715,29 @@ border-radius: 50%;
     min-height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
-    padding: 72px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
 }
 
 .modal-close-button {
     position: absolute;
     top: 24px;
     right: 24px;
-    border-color: rgba(0, 0, 0, 0.10);
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
     background-color: #E7E9FC;
     border-radius: 50%;
-    padding: 8px;
+    padding: 0px;
     line-height: 0;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .modal-close-button-icon {
@@ -738,7 +749,8 @@ border-radius: 50%;
 .modal-close-button:hover .modal-close-button-icon use,
 .modal-close-button:focus .modal-close-button-icon use {
     background-color: #404BBF;
-    fill: #F4F4FD;
+    fill: #ffffff;
+    border: none;
 }
 
 .contacts-form-name {
