@@ -70,7 +70,7 @@
           <button class="hero-button" type="button">
             <span class="hero-button-name">Order Service</span>
           </button>
-        </div>
+          </div>
       </section>
 
       <!-- BENEFITS SECTION -->
@@ -503,13 +503,53 @@
             </li>
           </ul>
         </div>
-
-        <form class="form" name="subscribe_email_form" autocomplete="off">
-          <label class="form-label">
-            Subscribe</label>
-          <input class="form-input" type="email" name="subscribe" placeholder="E-mail"/>   
-        </form>
       </div>
     </footer>
+
+    <div class="backdrop is-open">
+<div class="modal">
+<button class="modal-close-button" type="button" aria-label="modal close button">
+<svg class="modal-close-button-icon" width="8" height="8">
+  <use href="./images/icons.svg#icon-close"></use>
+</svg>
+</button>
+<p class="contacts-form-name">
+Leave your contacts and we will call you back
+</p>
+<form class="contacts-form">
+<div class="contacts-form-wrapper">
+<label class="contacts-form-label" for="">Name</label>
+<input type="text" 
+class="contacts-form-field"
+name="user_name" 
+required 
+pattern="[a-zA-Z-а-яА-ЯіІїЇєЄґҐйЙ']+"/>
+</div>
+
+<div class="contacts-form-wrapper">
+<label class="contacts-form-label" for="">Phone</label>
+<input type="tel" class="contacts-form-field" name="user_tel"/>
+</div>
+
+<div class="contacts-form-wrapper">
+<label class="contacts-form-label" for="">Email</label>
+<input type="email" class="contacts-form-field" name="user_email"/>
+</div>
+
+<div class="contacts-form-wrapper">
+<label class="contacts-form-label" for="">Comment</label>
+<textarea class="contacts-form-comment" id=""  placeholder="Text input"></textarea>
+</div>
+<div class="contacts-form-checkbox-wrapper">
+  <input type="checkbox" class="contacts-form-checkbox">
+<label class="contacts-form-checkbox-label" for="" >I accept the terms and conditions of the 
+  <span class="contacts-form-policy-text">Privacy Policy</span></label>
+</div>
+<button class="contacts-form-btn">Send</button>
+</form>
+</div>
+
+    </div>
+
   </body>
 </html>
